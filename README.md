@@ -22,6 +22,5 @@ docker run -d --net=host --name=tomcat tomcat_docker
 
   http://localhost/manager/
 2. Login with:
-
-  Username: tomcat
-  Password: tomcat
+  - Username: tomcat
+  - Password: tomcat
