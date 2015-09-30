@@ -1,9 +1,9 @@
 FROM	tomcat:7-jre7
 
-ENV	LINK_DIR="/opt/sap/dataservices" \
+ENV	COMPASS_SOURCES_DIR="/root/install" \
+	LINK_DIR="/opt/sap/dataservices" \
 	DS_COMMON_DIR="/opt/sap/dataservices" \
-	JAVA_OPTS="-Xms128m -Xmx2048m -XX:MaxPermSize=512m" \
-	COMPASS_SOURCES_DIR="/root/install"
+	JAVA_OPTS="-Xms128m -Xmx2048m -XX:MaxPermSize=512m"
 
 COPY	install	${COMPASS_SOURCES_DIR}
 
