@@ -16,6 +16,10 @@ To run:
 docker run -d --net=host --name=tomcat tomcat_docker
 ```
 
+A normal container exit status after a `docker stop` is 143 (128 + 15).
+
+If tomcat had to be KILLed by `docker`, the exit code is 137 (128 + 9).
+
 ### Test
 
 1. Go to the manager interface:
