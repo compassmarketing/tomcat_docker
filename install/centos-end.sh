@@ -1,10 +1,11 @@
-#! /bin/bash
+#!/bin/bash
 
 source ${COMPASS_SOURCES_DIR}/include/shell-tools.shh
 
 MSG	'Cleaning up'
-apt-get -y clean
-rm -rf	/var/lib/apt/lists/* \
+yum clean all
+rm -rf \
 	/tmp/* \
 	/var/tmp/*
-MSG	'DONE'
+
+MSG	'Installation complete'
