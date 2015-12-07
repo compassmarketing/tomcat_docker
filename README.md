@@ -20,7 +20,9 @@ Shell patches should only use the variables `COMPASS_SAP_SOURCES_DIR` and `COMPA
   - `COMPASS_SAP_DS_AUTOINSTALL`
   - `COMPASS_SAP_DS_SP_AUTOINSTALL`
   - `COMPASS_SAP_DS_PATCH_AUTOINSTALL`
-3. Build:
+3. Start an IPS instance
+4. Configure the `COMPASS_SAP_IPS_AUTOINSTALL` file to connect to it during the build process
+5. Build:
 
   ```console
   docker build -t tomcat_docker .
@@ -42,3 +44,8 @@ If tomcat had to be KILLed by `docker`, the exit code is 137 (128 + 9).
 
 1. Start the container.
 2. Connect to ips.
+
+### Known issues
+
+- Patches modifying dataservices/bin/dsodbcdb_env.sh will fail.  This is normal and does not affect the building of the container.
+- /opt/sap/sap_bobj/enterprise_xi40/java/lib/im/mysql/': No such file or directory is normal.
