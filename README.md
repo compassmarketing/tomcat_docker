@@ -33,8 +33,10 @@ Shell patches should only use the variables `COMPASS_SAP_SOURCES_DIR` and `COMPA
 To run:
 
 ```console
-docker run -d --net=host --name=tomcat tomcat_docker
+docker run -d --net=host --name=tomcat <host volumes> <variables> tomcat_docker
 ```
+
+Attach host volumes with `--volume=/host-mountpoint:/container-mountpoint`
 
 A normal container exit status after a `docker stop` is 143 (128 + 15).
 
